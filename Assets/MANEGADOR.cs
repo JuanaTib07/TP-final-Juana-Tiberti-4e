@@ -39,15 +39,11 @@ public class MANEGADOR : MonoBehaviour
         {
             currentIndex--;
 
-            if (currentIndex < comida.Length)
+            if (currentIndex < 0)
             {
+                currentIndex = 4;
                 DesactivateAll();
                 ActivateIndex(currentIndex);
-            }
-
-            else if (currentIndex >= comida.Length)
-            {
-                currentIndex = 13;
             }
 
         }
