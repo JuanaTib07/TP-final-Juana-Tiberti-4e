@@ -35,17 +35,22 @@ public class MANEGADOR : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             currentIndex--;
 
-            if (currentIndex < 0)
+            if (currentIndex < comida.Length)
             {
-                currentIndex = 4;
                 DesactivateAll();
                 ActivateIndex(currentIndex);
             }
 
+            else if (currentIndex >= -1)
+            {
+                currentIndex = comida.Length-1;
+            }
+
+            
         }
     }
 
